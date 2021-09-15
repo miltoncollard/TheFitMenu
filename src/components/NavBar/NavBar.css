@@ -1,0 +1,50 @@
+header{
+    background-color: #a9a9a9;
+}
+
+header .MuiToolbar-regular{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+    z-index: 1000;
+}
+
+.MuiTypography-root{
+    width: 100%;
+    justify-content: space-between;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav .nav__logo{
+    float: left;
+    width: 150px;
+}
+
+.nav .nav__menu{
+    margin-left: auto;
+}
+
+.nav .nav__list .nav__item{
+    display: flex;
+    margin-left: 5rem;
+    font-size: 1rem;
+}
+
+.nav .nav__list .nav__item .nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+header .MuiButton-label{
+    margin-left: 4rem;
+}
