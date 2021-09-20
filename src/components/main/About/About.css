@@ -1,0 +1,19 @@
+.about{
+    display: block;
+}
+.about .about__intro{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.about .about__intro h2{
+    width: 50%;
+    color: rgb(150, 221, 109);
+    font-size: 40px;
+}
+
+.about .about__intro p{
+    width: 50%;
+}

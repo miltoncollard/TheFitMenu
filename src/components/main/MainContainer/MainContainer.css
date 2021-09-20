@@ -1,0 +1,12 @@
+.banner{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+}
+.banner .main__banner{
+    position: absolute;
+    left: 0;
+    top: -100%;
+}

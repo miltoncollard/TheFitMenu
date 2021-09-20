@@ -1,0 +1,16 @@
+.viandas .product__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.product__card .product__card__img img{
+    margin-bottom: 10px;
+}
+.product__card button{
+    border: 2px black solid;
+    border-radius: 0px;
+    width: 150px;
+    padding: 5px;
+}
