@@ -1,0 +1,9 @@
+.clientes{
+    margin: 150px 0;
+}
+
+.clientes__intro{
+    font-size: 25px;
+    color: yellowgreen;
+    padding-bottom: 50px;
+}

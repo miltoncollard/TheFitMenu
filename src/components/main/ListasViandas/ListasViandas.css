@@ -1,8 +1,8 @@
 .viandas__intro{
-    margin-bottom: 50px;
+    margin: 150px 0;
 }
 
 .viandas__intro h2{
-    color: rgb(150, 221, 109);
-    font-size: 50px;
+    color: yellowgreen;
+    font-size: 40px;
 }

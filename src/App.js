@@ -9,6 +9,7 @@ import About from './components/main/About/About';
 import MainContainer from './components/main/MainContainer/MainContainer';
 import ListasViandas from './components/main/ListasViandas/ListasViandas';
 import NuestrosClientes from './components/main/NuestrosClientes/NuestrosClientes';
+import ServicioCatering from './components/main/ServicioCatering/ServicioCatering';
 import Footer from  './components/footer/footer';
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <MainContainer></MainContainer>
         <ListasViandas></ListasViandas>
         <NuestrosClientes></NuestrosClientes>
+        <ServicioCatering></ServicioCatering>
+
       </main>
       <Footer></Footer>
     </div>

@@ -1,0 +1,22 @@
+.clientes__container{
+    display: flex;
+    padding-left:10%;
+    padding-right: 10%;
+}
+
+.clientes__container .comment__card{
+    text-align: left;
+    padding-right: 50px;
+}
+
+.clientes__container .comment__card h4{
+    color: yellowgreen;
+}
+
+.clientes__container .comment__card p{
+    font-style: oblique;
+}
+
+.clientes__container .comment__card a{
+    color: rgb(243, 173, 226);
+}

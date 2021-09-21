@@ -3,7 +3,7 @@
     height: 300px;
     overflow: hidden;
     position: relative;
-    margin-top: 50px;
+    margin: 100px 0;
 }
 .banner .main__banner{
     position: absolute;
