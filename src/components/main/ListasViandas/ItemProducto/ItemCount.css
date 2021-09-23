@@ -1,0 +1,41 @@
+.product__container .product__stock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.product__stock .stock__item{
+    display: flex;
+    justify-content :center;
+    align-items: center;
+    border: 1px rgb(142, 228, 124) solid;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 150px;
+    gap: 20px;
+}
+
+.product__stock .stock__item button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: none;
+    color: cornflowerblue;
+    font-size: 25px;
+}
+
+.product__stock .stock__item .stock__btnrst{
+    position: relative;
+    left: 10px;
+}
+.product__stock .stock__item .stock__btnadd{
+    position: relative;
+    right: 10px;
+}
+.product__stock .stock__item p{
+    padding: 0 30px;
+    margin: 5px;
+}

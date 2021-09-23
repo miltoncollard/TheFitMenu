@@ -1,8 +1,13 @@
 .viandas .product__container{
+    display: block;
+    gap: 50px;
+}
+
+.product__container .product__card{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .product__card .product__card__img img{
@@ -13,4 +18,11 @@
     border-radius: 0px;
     width: 150px;
     padding: 5px;
+}
+
+.product__container .product__stock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
