@@ -2,7 +2,6 @@ import logo from '../../assets/img/logo.png';
 //css
 import './footer.css';
 //external components
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faInstagram, faFacebook, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';

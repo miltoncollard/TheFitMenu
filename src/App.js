@@ -7,7 +7,7 @@ import NavBar from './components/header/NavBar/NavBar';
 import Carousel from './components/header/Carousel/carousel';
 import About from './components/main/About/About';
 import MainContainer from './components/main/MainContainer/MainContainer';
-import ListasViandas from './components/main/ListasViandas/ListasViandas';
+import Viandas from './components/main/Viandas/Viandas';
 import NuestrosClientes from './components/main/NuestrosClientes/NuestrosClientes';
 import ServicioCatering from './components/main/ServicioCatering/ServicioCatering';
 import Footer from  './components/footer/footer';
@@ -22,7 +22,7 @@ function App() {
       <main>
         <About></About>
         <MainContainer></MainContainer>
-        <ListasViandas></ListasViandas>
+        <Viandas></Viandas>
         <NuestrosClientes></NuestrosClientes>
         <ServicioCatering></ServicioCatering>
 

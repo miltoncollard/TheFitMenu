@@ -1,12 +1,13 @@
 .viandas .product__container{
-    display: block;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     gap: 50px;
 }
 
 .product__container .product__card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     gap: 20px;
 }
 

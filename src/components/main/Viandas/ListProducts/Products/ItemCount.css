@@ -1,10 +1,10 @@
-.product__container .product__stock{
+.product__card .product__stock{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.product__stock .stock__item{
+.product__card .stock__item{
     display: flex;
     justify-content :center;
     align-items: center;
@@ -15,7 +15,7 @@
     gap: 20px;
 }
 
-.product__stock .stock__item button{
+.product__card .stock__item button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,15 +27,15 @@
     font-size: 25px;
 }
 
-.product__stock .stock__item .stock__btnrst{
+.product__card .stock__item .stock__btnrst{
     position: relative;
     left: 10px;
 }
-.product__stock .stock__item .stock__btnadd{
+.product__card .stock__item .stock__btnadd{
     position: relative;
     right: 10px;
 }
-.product__stock .stock__item p{
+.product__card .stock__item p{
     padding: 0 30px;
     margin: 5px;
 }
