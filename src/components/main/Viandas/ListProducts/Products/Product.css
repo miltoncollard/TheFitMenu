@@ -1,0 +1,7 @@
+.product__card .product__card__img img{
+    z-index: -100;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}

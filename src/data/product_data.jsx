@@ -1,28 +1,34 @@
+//imagenes
+import img1 from './../assets/img/products/clasica.png'
+import img2 from './../assets/img/products/vegetarianas.png'
+import img3 from './../assets/img/products/eco.png'
+import img4 from './../assets/img/products/light.jpeg'
+import img5 from './../assets/img/products/light.jpeg'
 const product_card = [
     {
         id:1,
         product_name: "Vianda Clasica",
-        thumb: './../assets/img/products/clasica.png'
+        thumb: img1
     },
     {
         id:2,
         product_name: "Vianda Proteicas",
-        thumb: './../assets/img/products/vegetarianas.png'
+        thumb: img2
     },
     {
         id:3,
         product_name: "Vianda Vegetarianas",
-        thumb: './../assets/img/products/eco.png'
+        thumb: img3
     },
     {
         id:4,
         product_name: "Vianda Light",
-        thumb: './../assets/img/products/light.jpeg'
+        thumb: img4
     },
     {
         id:5,
         product_name: "Vianda Office Eco",
-        thumb: './../assets/img/products/light.jpeg'
+        thumb: img5
     }
 ]
 
