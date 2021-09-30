@@ -2,7 +2,6 @@
 import './Viandas.css';
 //internal components
 import ListProducts from './ListProducts/ListProducts';
-import ListProductsAPI from './ListProductsAPI/ListProductsAPI';
 
 const Viandas = () => {
     return ( 

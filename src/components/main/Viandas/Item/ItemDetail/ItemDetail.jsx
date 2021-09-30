@@ -1,12 +1,12 @@
 import React,{useState, useEffect} from "react";
 
 function itemDetail(props){
+    
+    const platos = props.platos;
 
-    const platos = props.plates;
-    console.log("platos: ", platos)
     return(
         <div className="detail__item">
-
+            <span>{platos}</span>
         </div>
     )
 }

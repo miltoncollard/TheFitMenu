@@ -14,36 +14,27 @@ function ItemDetailContainer(){
         getMenus() 
     },[])
 
-    useEffect(() =>{
-        getProduct.then((response)=>{
-            setInfoProduct(response)
-        })
-    },[])
-
-    const getMenus = () =>{
-        fetch(urlMenusApi)
-        .then((response) =>{ 
-            return response.json()
-        })
+    const getMenus = async () =>{
+        return await fetch(urlMenusApi)
+        .then((response) => response.json())
         .then((data) =>{
-            setMenus(data)
+            console.log(`FETCH.data`, data)
+            setInfoProduct(data)
         })
+        .catch(err => console.log(`err`, err))
     }
 
-    const getProduct = new Promise((resolve)=>{
-        setTimeout(()=>{
-            const mockProduct = menus[1];
-            console.log("mock:", mockProduct)
-            resolve(mockProduct)
-        }, 2000)
-    })
-    console.log("infoProduct:", infoProduct)
     return(
         <div className="detail__container">
             <img src={imagen} alt="" />
-            {infoProduct.plates.map((platos, index) =>{
-                return (<ItemDetail key={index}  dplatos={platos.name}/>)
-            })}
+            {
+                infoProduct &&
+                infoProduct.length &&
+                infoProduct[1] &&
+                infoProduct[1].plates.map((plato,index) =>(
+                    <ItemDetail key={index} platos={plato.name}/>
+                ))
+            }
         </div>
     )
 }
