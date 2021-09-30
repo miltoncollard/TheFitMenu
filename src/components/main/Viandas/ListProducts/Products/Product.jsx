@@ -1,20 +1,16 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import ItemCount from "./ItemCount";
 import './Product.css'
-
+//<ItemCount stock={4} initial={0}/>
 
 const Product = (props) =>{
-    console.log("props: ", props)
-    console.log("props img: ", props.thumb)
-    console.log("props name: ", props.product_name)
     return(
-        <div className="product__card">
-            <div className="product__card__img">
+        <div className="home__product__card">
+            <div className="home__product__card__img">
                 <img src={props.thumb}/>
             </div>
-            <button>{props.title}</button>
-            
-            <ItemCount stock={4} initial={0}/>
+            <Link to="/nuestrasviandas"><button>{props.title}</button></Link>
         </div>
     )
 

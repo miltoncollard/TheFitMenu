@@ -15,10 +15,11 @@
     margin-bottom: 10px;
 }
 .product__card button{
-    border: 2px black solid;
+    border: 1px black solid;
     border-radius: 0px;
-    width: 150px;
+    width: 200px;
     padding: 5px;
+    font-weight: bold;
 }
 
 .product__container .product__stock{

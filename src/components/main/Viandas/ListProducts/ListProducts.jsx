@@ -17,7 +17,6 @@ export default function ListProduct(){
 
     useEffect(() =>{
         getProducts.then((res)=>{
-            console.log("respuesta promesa: ", res)
             setProduct(res)
         })
     },[])
@@ -25,7 +24,6 @@ export default function ListProduct(){
     return(
         <div className="product__container"> 
             {products.map((product, index) =>{
-                console.log(products)
                 return (<Product key={index} thumb={product.thumb} title={product.product_name}/>)
             })}
         </div>

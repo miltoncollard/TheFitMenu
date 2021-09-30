@@ -6,15 +6,13 @@
 }
 
 .carousel__img img{
-    position: absolute;
     left: 0;
-    z-index: -100;
+    z-index: -1;
 }
 
 .carousel__text{
     display: block;
     position: relative;
-    z-index: -50;
     top: -350px;
 }
 

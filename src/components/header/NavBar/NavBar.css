@@ -7,7 +7,7 @@
     z-index: 1000;
     margin: 0;
     padding-bottom: 10px;
-    background-color: rgba(128, 128, 128, 0.583);
+    background-color: rgba(179, 173, 143, 0.583);
 }
 
 .nav .nav__logo{
@@ -25,15 +25,22 @@
 
 .nav .nav__menu .nav__list .nav__item{
     display: inline-block;
-    margin-left: 2.5rem;
     font-size: 1rem;
 }
 
 .nav .nav__list .nav__item .nav__link{
+    padding: 10px 20px;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
+.link{
+    text-decoration: none;
+}
+
+.nav__link:hover{
+    background-color: rgba(179, 173, 143, 0.24);
+}
 .nav .nav__icons{
     width: 10%;
     color: white;
@@ -42,4 +49,38 @@
 .nav .nav__icons a{
     color: white;
     text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+.nav__list .nav__item a{
+    display: block;
+}
+
+.nav__list .nav__item .subnav__list{
+    display: none;
+    position: absolute;
+}
+
+.nav__list .nav__item:hover > ul{
+    display: block;
+}
+
+.subnav__list{
+    width: 178px;
+    padding: 0;
+    color: white;
+    background-color: rgba(179, 173, 143, 0.24);
+}
+
+.subnav__list .subnav__link{
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.subnav__list .subnav__link li a{
+    padding: 0;
 }

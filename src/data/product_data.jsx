@@ -7,27 +7,27 @@ import img5 from './../assets/img/products/light.jpeg'
 const product_card = [
     {
         id:1,
-        product_name: "Vianda Clasica",
+        product_name: "VIANDA CLASICA",
         thumb: img1
     },
     {
         id:2,
-        product_name: "Vianda Proteicas",
+        product_name: "VIANDA PROTEICAS",
         thumb: img2
     },
     {
         id:3,
-        product_name: "Vianda Vegetarianas",
+        product_name: "VIANDA VEGETARIANAS",
         thumb: img3
     },
     {
         id:4,
-        product_name: "Vianda Light",
+        product_name: "VIANDA LIGHT",
         thumb: img4
     },
     {
         id:5,
-        product_name: "Vianda Office Eco",
+        product_name: "VIANDA OFFICE ECO",
         thumb: img5
     }
 ]

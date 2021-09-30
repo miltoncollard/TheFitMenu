@@ -1,30 +1,37 @@
 import logo from '../../../assets/img/logo.png'
 import './NavBar.css';
+import {Link} from 'react-router-dom';
 //external components
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import {faShoppingCart, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
   return ( 
     <nav className="nav container">
-        <img className="nav__logo" src={logo} alt="" />
+        <a href="/">
+            <img className="nav__logo" src={logo} alt="" />
+        </a>
         <div className="nav__menu">
             <ul className="nav__list">
                 <li className="nav__item">
-                    <a href="#Menu1" className="nav__link">NUESTRAS VIANDAS</a>
+                    <Link to="/nuestrasviandas" className="link"><a href="" className="nav__link">NUESTRAS VIANDAS</a></Link>
                 </li>
                 <li className="nav__item">
-                    <a href="#Menu2" className="nav__link">HACÉ TU PEDIDO</a>
+                    <Link to="/nuestrasviandas" className="link"><a href="" className="nav__link">HACÉ TU PEDIDO<FontAwesomeIcon icon={faChevronDown} /></a></Link>
+                    <ul className="subnav__list">
+                        <li className="subnav__item">
+                            <Link to ="/comohacermipedido" className="link"><a href="" className="subnav__link">¿CÓMO HACER MI PEDIDO?</a></Link>
+                        </li>
+                    </ul>
                 </li>
                 <li className="nav__item">
-                    <a href="#Menu3" className="nav__link">NOVEDADES</a>
+                    <Link to="/novedades" className="link"><a href="" className="nav__link">NOVEDADES</a></Link>
                 </li>
                 <li className="nav__item">
-                    <a href="#Menu3" className="nav__link">QUIÉNES SOMOS</a>
+                    <Link to="/quienessomos" className="link"><a href="" className="nav__link">QUIÉNES SOMOS</a></Link>
                 </li>
                 <li className="nav__item">
-                    <a href="#Menu3" className="nav__link">CONTACTO</a>
+                    <Link to="/contacto" className="link"><a href="" className="nav__link">CONTACTO</a></Link>
                 </li>
             </ul>
         </div>

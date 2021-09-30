@@ -1,11 +1,11 @@
 import './carousel.css';
-import image from '../../../assets/img/carousels/carousel2.jpg'
+import image from '../../../assets/img/carousels/carousel2.jpg';
 //external components
 
 
 const Carousel = () => {
   return (
-    <div className="header__carousel">
+    <div className="carousel">
       <div className="carousel__img">
         <img src={image} alt="" />
       </div>
