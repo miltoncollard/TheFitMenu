@@ -1,7 +1,7 @@
 //CSS
 import './NuestrasViandas.css'
 //internal components
-import ListProductsAPI from '../components/main/Viandas/ListProductsAPI/ListProductsAPI';
+import ListProductsComplete from '../components/main/Viandas/ListProductsComplete/ListProductsComplete';
 
 const NuestrasViandas = () => {
     return ( 
@@ -9,7 +9,7 @@ const NuestrasViandas = () => {
             <div className="viandas__intro">
                 <h2>NUESTRAS VIANDAS</h2>
             </div>
-            <ListProductsAPI></ListProductsAPI>
+            <ListProductsComplete></ListProductsComplete>
         </section>
     );
   }

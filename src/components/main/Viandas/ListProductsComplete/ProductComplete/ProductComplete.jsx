@@ -3,10 +3,9 @@ import {Link} from 'react-router-dom';
 import img from '../../../../../assets/img/products/vegetarianas.png';
 
 //CSS
-import './ProductAPI.css'
+import './ProductComplete.css'
 
 const ProductAPI = (props) =>{
-    console.log("nombre vianda: ", props.name)
     const cadena = props.name.split('-');
     return(
         <div className="product__card">

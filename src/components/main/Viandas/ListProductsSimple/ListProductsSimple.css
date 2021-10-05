@@ -1,12 +1,11 @@
-.viandas .product__container{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    gap: 50px;
+.viandas .home__product__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem;
+    margin: 0 100px;
 }
 
-.product__container .product__card{
+.home__product__container .product__card{
     display: block;
     gap: 20px;
 }
@@ -22,7 +21,7 @@
     font-weight: bold;
 }
 
-.product__container .product__stock{
+.home__product__container .product__stock{
     display: flex;
     justify-content: center;
     align-items: center;

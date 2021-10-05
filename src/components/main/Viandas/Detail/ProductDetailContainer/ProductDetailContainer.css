@@ -1,0 +1,35 @@
+.detail__container{
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.detail__container .detail__img{
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+.detail__container img{
+    margin: 20px 25px 40px 40px;
+    width: 200px;
+    height: 200px;
+}
+
+.detail__container .item__container{
+    width: 70%;
+    margin-left: 50px;
+}
+
+.detail__container .item__container h4{
+    display: flex;
+    justify-content: left;
+}
+
+.detail__container .detail__item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}

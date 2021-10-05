@@ -1,7 +1,7 @@
 //css
 import './Viandas.css';
 //internal components
-import ListProducts from './ListProducts/ListProducts';
+import ListProductsSimple from './ListProductsSimple/ListProductsSimple';
 
 const Viandas = () => {
     return ( 
@@ -10,7 +10,7 @@ const Viandas = () => {
                 <h2>NUESTRAS VIANDAS</h2>
                 <p>Elegí de nuestra selección de platos saludables</p>
             </div>
-            <ListProducts></ListProducts>
+            <ListProductsSimple></ListProductsSimple>
         </section>
     );
   }

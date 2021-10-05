@@ -1,19 +1,23 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import ItemCount from "./ItemCount";
-import './Product.css'
+import img from '../../../../../assets/img/products/clasica.png'
+import './ProductSimple.css'
 //<ItemCount stock={4} initial={0}/>
 
-const Product = (props) =>{
+const ProductSimple = (props) =>{
+
+    const menus = props.name;
+
     return(
         <div className="home__product__card">
             <div className="home__product__card__img">
-                <img src={props.thumb}/>
+                <img src={img}/>
             </div>
-            <Link to="/nuestrasviandas"><button>{props.title}</button></Link>
+            <Link to="/nuestrasviandas"><button>{props.name}</button></Link>
         </div>
     )
 
 }
 
-export default Product
+export default ProductSimple

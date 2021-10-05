@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import ProductAPI from './ProductAPI/ProductAPI';
+import ProductComplete from './ProductComplete/ProductComplete';
 //css
-import './ListProductsAPI.css';
+import './ListProductsComplete.css';
 
 
-export default function ListProductsAPI(){
+export default function ListProductsComplete(){
     const [products, setProduct] = useState([])
     const urlMenusApi = 'https://strapi.thefit-menu.com/pricings'
 
@@ -26,7 +26,7 @@ export default function ListProductsAPI(){
         <div className="product__container"> 
            <div className="product__content">
                 {products.map((menu, index) =>{
-                    return (<ProductAPI key={index} name={menu.name} price={menu.price}/>)
+                    return (<ProductComplete key={index} name={menu.name} price={menu.price}/>)
                 })}
            </div>
         </div>

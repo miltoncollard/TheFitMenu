@@ -8,6 +8,7 @@
 
 .product__card .product__card__img img{
     width: 100%;
+    object-fit: cover;
 }
 .product__card .product__card__text{
     display: block;

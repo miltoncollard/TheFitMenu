@@ -6,7 +6,7 @@ function itemDetail(props){
 
     return(
         <div className="detail__item">
-            <span>{platos}</span>
+            <span>•{platos}</span>
         </div>
     )
 }

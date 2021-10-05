@@ -1,10 +1,10 @@
 //internal components
-import ItemDetailContainer from '../components/main/Viandas/Item/ItemDetailContainer/ItemDetailContainer';
+import ProductDetailContainer from '../components/main/Viandas/Detail/ProductDetailContainer/ProductDetailContainer';
 
 const Menu = () => {
     return ( 
         <section className="viandas section">
-            <ItemDetailContainer></ItemDetailContainer>
+            <ProductDetailContainer></ProductDetailContainer>
         </section>
     );
   }

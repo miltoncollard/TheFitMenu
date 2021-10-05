@@ -1,11 +1,11 @@
 import React,{useState, useEffect} from "react";
-import ItemDetail from '../ItemDetail/ItemDetail';
+import ItemDetail from '../ProductDetail/ProductDetail';
+import './ProductDetailContainer.css';
 
 //assets
 import imagen from '../../../../../assets/img/products/clasica.png';
 function ItemDetailContainer(){
 
-    const [menus, setMenus] = useState([]);
     const urlMenusApi = 'https://strapi.thefit-menu.com/menus';
 
     const [infoProduct, setInfoProduct] = useState([]);
@@ -26,15 +26,21 @@ function ItemDetailContainer(){
 
     return(
         <div className="detail__container">
-            <img src={imagen} alt="" />
-            {
-                infoProduct &&
-                infoProduct.length &&
-                infoProduct[1] &&
-                infoProduct[1].plates.map((plato,index) =>(
-                    <ItemDetail key={index} platos={plato.name}/>
-                ))
-            }
+            <div className="detail__img">
+                <img src={imagen} alt="" />
+            </div>
+            <div className="item__container">
+                <h4>PLATOS DE LA SEMANA: </h4>
+                {
+                    infoProduct &&
+                    infoProduct.length &&
+                    infoProduct[1] &&
+                    infoProduct[1].plates.map((plato,index) =>(
+                        <ItemDetail key={index} platos={plato.name}/>
+                    ))
+                }
+            </div>
+
         </div>
     )
 }
