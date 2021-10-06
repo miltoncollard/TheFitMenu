@@ -8,6 +8,7 @@ import About from '../components/main/About/About';
 import Banner from '../components/main/Banner/Banner';
 import Viandas from '../components/main/Viandas/Viandas';
 import Menu from '../pages/Menu';
+import Cart from '../components/main/Cart/cart';
 import NuestrosClientes from '../components/main/NuestrosClientes/NuestrosClientes';
 import NuestrasViandas from '../pages/NuestrasViandas';
 import ServicioCatering from '../components/main/ServicioCatering/ServicioCatering';
@@ -25,6 +26,9 @@ export default function AppRouter(){
                 </Route>
                 <Route exact path="/menu">
                     <Menu></Menu>
+                </Route>
+                <Route exact path="/cart">
+                    <Cart></Cart>
                 </Route>
                 <Route path="/comohacermipedido">
                     <Construccion></Construccion>
