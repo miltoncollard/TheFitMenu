@@ -1,22 +1,27 @@
 import './carousel.css';
-import image from '../../../assets/img/carousels/carousel2.jpg';
+import img1 from '../../../assets/img/carousels/carousel1.png';
+import img2 from '../../../assets/img/carousels/carousel2.png';
+import img3 from '../../../assets/img/carousels/carousel3.png';
 //external components
+import { Carousel } from 'react-responsive-carousel';  //https://www.npmjs.com/package/react-responsive-carousel
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 
-const Carousel = () => {
+const DemoCarousel = () => {
   return (
-    <div className="carousel">
-      <div className="carousel__img">
-        <img src={image} alt="" />
-      </div>
-      <div className="carousel__text">
-          <h1>LA FORMA MÁS</h1>
-          <h1>FACIL DE COMER</h1>
-          <h1>SALUDABLE</h1>
-      </div>
-    </div>
+      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} interval={5000} showArrows={false} showStatus={false}>
+          <div>
+              <img src={img1} />
+          </div>
+          <div>
+              <img src={img2} />
+          </div>
+          <div>
+              <img src={img3} />
+          </div>
+      </Carousel>
     
   );
 }
 
-export default Carousel;
+export default DemoCarousel;

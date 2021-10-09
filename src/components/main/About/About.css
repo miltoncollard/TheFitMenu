@@ -1,5 +1,10 @@
+/*Import Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .about{
     display: block;
+    width: 1280px;
+    margin: 0 auto;
 }
 .about .about__intro{
     display: flex;
@@ -9,11 +14,19 @@
 }
 
 .about .about__intro h2{
-    width: 50%;
+    width: 30%;
     color: yellowgreen;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Maharlika';
+    font-weight: 100;
 }
 
 .about .about__intro p{
-    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    width: 70%;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    font-weight: bold;
 }

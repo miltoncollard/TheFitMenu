@@ -1,34 +1,57 @@
-.about .owner__container{
-    width: 100%;
+.about{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.about .owner__container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     flex-direction: row;
-    position: relative;
 }
 
 .about .owner__container .owner__content{
     display: inline-block;
-    width: 30%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
 }
 
+.about .owner__container .owner__content .owner__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+}
 .about .owner__container .owner__content img{
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
+    height: 100%;
 }
 
-.about .owner__container .owner__content h3{
+.about .owner__container .owner__content .owner__text{
+    width: 100%;
+}
+.about .owner__container .owner__content .owner__text h3{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 80px;
+    margin-bottom: 30PX;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    font-weight: bold;
 }
 
-.about .owner__container .owner__content p{
+.about .owner__container .owner__content .owner__text p{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    font-weight: bold;
 }

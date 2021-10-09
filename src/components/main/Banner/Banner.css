@@ -1,12 +1,3 @@
-.banner{
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
+.react-parallax{
     margin: 100px 0;
-}
-.banner .main__banner{
-    position: absolute;
-    left: 0;
-    top: -100%;
 }

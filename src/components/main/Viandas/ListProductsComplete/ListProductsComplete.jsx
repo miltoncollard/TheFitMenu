@@ -18,6 +18,7 @@ export default function ListProductsComplete(){
             return response.json()
         })
         .then((data) =>{
+            console.log("data: ", data)
             setProduct(data)
         })
     }
@@ -26,7 +27,7 @@ export default function ListProductsComplete(){
         <div className="product__container"> 
            <div className="product__content">
                 {products.map((menu, index) =>{
-                    return (<ProductComplete key={index} name={menu.name} price={menu.price}/>)
+                    return (<ProductComplete key={index} name={menu.name} price={menu.price} plates={menu.menuA.plates}/>)
                 })}
            </div>
         </div>

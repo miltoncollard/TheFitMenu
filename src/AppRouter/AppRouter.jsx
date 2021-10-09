@@ -3,7 +3,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 //components
 import NavBar from '../components/header/NavBar/NavBar';
-import Carousel from '../components/header/Carousel/carousel';
+import DemoCarousel from '../components/header/Carousel/carousel';
 import About from '../components/main/About/About';
 import Banner from '../components/main/Banner/Banner';
 import Viandas from '../components/main/Viandas/Viandas';
@@ -43,7 +43,7 @@ export default function AppRouter(){
                     <Construccion></Construccion>
                 </Route>
                 <Route exact path="/">
-                    <Carousel/>
+                    <DemoCarousel/>
                     <About/>
                     <Banner/>
                     <Viandas/>

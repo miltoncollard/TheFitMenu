@@ -6,7 +6,10 @@ const About = () => {
         <section className="about section">
             <div className="about__intro">
                 <h2>¿QUIÉNES SOMOS?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia asperiores magnam debitis? Vero cupiditate modi voluptates earum fuga maxime dicta dolore, inventore libero blanditiis laudantium, officia maiores, perferendis tempora.</p>
+                <p>En Abril de 2016 comenzamos con este emprendimiento de viandas. 
+                   Nuestra misión es ayudar a las personas a que puedan comer más saludable, 
+                   sin dejar de comer rico y casero. Nuestras viandas organizan y 
+                   simplifican tu vida para que puedas ocuparte de las cosas más importantes</p>
             </div>
             <ItemAbout></ItemAbout>
         </section>
