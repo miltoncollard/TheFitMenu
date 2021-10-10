@@ -14,7 +14,7 @@ const ProductSimple = (props) =>{
             <div className="home__product__card__img">
                 <img src={img}/>
             </div>
-            <Link to="/nuestrasviandas"><button>{props.name}</button></Link>
+            <Link to="/nuestrasviandas"><button>VIANDAS {props.name}</button></Link>
         </div>
     )
 

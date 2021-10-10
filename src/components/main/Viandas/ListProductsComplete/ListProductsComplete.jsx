@@ -27,7 +27,8 @@ export default function ListProductsComplete(){
         <div className="product__container"> 
            <div className="product__content">
                 {products.map((menu, index) =>{
-                    return (<ProductComplete key={index} name={menu.name} price={menu.price} plates={menu.menuA.plates}/>)
+                    console.log("products array:", products)
+                    return (<ProductComplete key={index} name={menu.name} price={menu.price} plates={menu.menuA.plates} id={menu.menuA.name}/>)
                 })}
            </div>
         </div>

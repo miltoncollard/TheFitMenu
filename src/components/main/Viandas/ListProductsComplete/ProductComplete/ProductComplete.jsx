@@ -5,7 +5,7 @@ import img from '../../../../../assets/img/products/vegetarianas.png';
 //CSS
 import './ProductComplete.css'
 
-const ProductAPI = ({price, name, plates}) =>{
+const ProductAPI = ({price, name, plates, id}) =>{
     const cadena = name.split('-');
     console.log("plates ", plates)
     return(
@@ -18,7 +18,7 @@ const ProductAPI = ({price, name, plates}) =>{
                 <h4>{cadena[0]}</h4>
                 <h4>${price}</h4>
             </div>
-            <Link to={{ pathname: '/menu', state: { plates: plates}}} className="link"><button>COMPRAR</button></Link>
+            <Link to={{ pathname: `/menu/${id}`, state: { plates: plates}}} className="link"><button>COMPRAR</button></Link>
         </div>
     )
 

@@ -1,9 +1,17 @@
 .viandas__intro{
-    margin: 150px 0 100px 0;
+    margin: 50px 0 100px 0;
 }
 
 .viandas__intro h2{
-    color: yellowgreen;
-    font-size: 40px;
+    color: rgb(156,210,43);
+    font-size: 50px;
     font-family: 'Maharlika';
+    font-weight: 100;
+    margin: 0;
+}
+
+.viandas__intro p{
+    font-size: 15px;
+    font-family: 'Montserrat';
+    font-weight: bold;
 }

@@ -1,6 +1,6 @@
 import logo from '../../../assets/img/logo.png'
 import './NavBar.css';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 //external components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faShoppingCart, faChevronDown } from '@fortawesome/free-solid-svg-icons'

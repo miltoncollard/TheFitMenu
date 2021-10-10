@@ -4,9 +4,11 @@
 
 .clientes__intro{
     font-size: 25px;
-    color: yellowgreen;
     padding-bottom: 50px;
 }
 .clientes__intro h2{
+    color: rgb(156,210,43);
+    font-size: 50px;
     font-family: 'Maharlika';
+    font-weight: 100;
 }

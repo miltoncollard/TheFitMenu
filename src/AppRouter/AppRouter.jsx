@@ -21,27 +21,13 @@ export default function AppRouter(){
         <BrowserRouter>
             <NavBar/>
             <Switch>
-                <Route exact path="/nuestrasviandas">
-                    <NuestrasViandas></NuestrasViandas>
-                </Route>
-                <Route exact path="/menu">
-                    <Menu></Menu>
-                </Route>
-                <Route exact path="/cart">
-                    <Cart></Cart>
-                </Route>
-                <Route path="/comohacermipedido">
-                    <Construccion></Construccion>
-                </Route>
-                <Route path="/novedades">
-                    <Construccion></Construccion>
-                </Route>
-                <Route path="/quienessomos">
-                    <Construccion></Construccion>
-                </Route>
-                <Route path="/contacto">
-                    <Construccion></Construccion>
-                </Route>
+                <Route exact path="/nuestrasviandas" component={NuestrasViandas}/> 
+                <Route exact path="/menu/:productID" component={Menu}/>
+                <Route exact path="/cart" component={Cart}/>
+                <Route path="/comohacermipedido" component={Construccion}/>
+                <Route path="/novedades" component={Construccion}/>
+                <Route path="/quienessomos" component={Construccion}/>
+                <Route path="/contacto" component={Construccion}/>
                 <Route exact path="/">
                     <DemoCarousel/>
                     <About/>
@@ -50,9 +36,7 @@ export default function AppRouter(){
                     <NuestrosClientes/>
                     <ServicioCatering/>
                 </Route>
-                <Route path="*">
-                    <Error404></Error404>
-                </Route>
+                <Route path="*" component={Error404}/>
             </Switch>
             <Footer/>
         </BrowserRouter>

@@ -21,7 +21,6 @@ const Footer = () => {
                 <a href=""><FontAwesomeIcon icon={faInstagram} size="3x"/></a>
                 <a href=""><FontAwesomeIcon icon={faFacebook} size="3x"/></a>
                 <a href=""><FontAwesomeIcon icon={faWhatsapp} size="3x"/></a>
-                <a href=""><FontAwesomeIcon icon={faEnvelope} size="3x"/></a>
             </div>
         </div>
     );

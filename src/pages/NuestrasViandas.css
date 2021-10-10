@@ -1,5 +1,8 @@
 .viandas__intro{
     margin: 0;
-    padding: 100px 0;
+    padding: 200px 0 100px 0;
 }
 
+.viandas__intro h2{
+    margin: 0;
+}

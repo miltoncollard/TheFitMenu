@@ -37,13 +37,14 @@ export default function ListProductsSimple(){
     function selectViandaName(nombre){
         tipoViandas.push(nombre[0])
     }
-
+    console.log("tipoViandas:",tipoViandas)
     //Genero nuevo Array sin nombres de viandas duplicados
     const tipoViandasSrt = [... new Set(tipoViandas)];
+    console.log("tipoViandasSrt:", tipoViandasSrt)
     return(
         <div className="home__product__container"> 
             {tipoViandasSrt.map((vianda, index) =>{
-                return (<ProductSimple key={index} name={vianda}/>)
+             return (<ProductSimple key={index} name={vianda}/>)
             })}
         </div>
     )

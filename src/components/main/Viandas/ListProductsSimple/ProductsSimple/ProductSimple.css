@@ -13,4 +13,7 @@
     border-style: none;
     border: 1px black solid;
     font-weight: bold;
+    font-size: 15px;
+    font-family: 'latoblack';
+    text-transform: uppercase;
 }
