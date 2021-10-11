@@ -1,14 +1,14 @@
 import React,{useState, useEffect} from "react";
 
-function itemDetail(props){
+function ItemDetail(props){
     
     const platos = props.platos;
 
     return(
         <div className="detail__item">
-            <span>•{platos}</span>
+            <span>• {platos}</span>
         </div>
     )
 }
 
-export default itemDetail;
+export default ItemDetail;

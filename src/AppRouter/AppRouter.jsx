@@ -15,30 +15,33 @@ import ServicioCatering from '../components/main/ServicioCatering/ServicioCateri
 import Construccion from '../components/building/building';
 import Error404 from '../components/Error/error404';
 import Footer from  '../components/footer/footer';
+import { CartProvider } from '../context/cartContext';
 
 export default function AppRouter(){
     return(
         <BrowserRouter>
-            <NavBar/>
-            <Switch>
-                <Route exact path="/nuestrasviandas" component={NuestrasViandas}/> 
-                <Route exact path="/menu/:productID" component={Menu}/>
-                <Route exact path="/cart" component={Cart}/>
-                <Route path="/comohacermipedido" component={Construccion}/>
-                <Route path="/novedades" component={Construccion}/>
-                <Route path="/quienessomos" component={Construccion}/>
-                <Route path="/contacto" component={Construccion}/>
-                <Route exact path="/">
-                    <DemoCarousel/>
-                    <About/>
-                    <Banner/>
-                    <Viandas/>
-                    <NuestrosClientes/>
-                    <ServicioCatering/>
-                </Route>
-                <Route path="*" component={Error404}/>
-            </Switch>
-            <Footer/>
+            <CartProvider>
+                <NavBar/>
+                <Switch>
+                    <Route exact path="/nuestrasviandas" component={NuestrasViandas}/> 
+                    <Route exact path="/menu/:productID" component={Menu}/>
+                    <Route exact path="/cart" component={Cart}/>
+                    <Route path="/comohacermipedido" component={Construccion}/>
+                    <Route path="/novedades" component={Construccion}/>
+                    <Route path="/quienessomos" component={Construccion}/>
+                    <Route path="/contacto" component={Construccion}/>
+                    <Route exact path="/">
+                        <DemoCarousel/>
+                        <About/>
+                        <Banner/>
+                        <Viandas/>
+                        <NuestrosClientes/>
+                        <ServicioCatering/>
+                    </Route>
+                    <Route path="*" component={Error404}/>
+                </Switch>
+                <Footer/>
+            </CartProvider>
         </BrowserRouter>
     )
 }

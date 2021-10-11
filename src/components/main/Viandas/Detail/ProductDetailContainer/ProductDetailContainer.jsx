@@ -1,13 +1,17 @@
-import React,{useState, useEffect} from "react";
+import React,{useState, useEffect, useContext} from "react";
 import {Link} from 'react-router-dom';
 import { useParams } from "react-router-dom";
-import ItemDetail from '../ProductDetail/ProductDetail';
-import './ProductDetailContainer.css';
-import ItemCount from "../../ListProductsSimple/ProductsSimple/ItemCount";
+import ItemDetail from '../ItemDetail/ItemDetail';
 
+//css
+import './ProductDetailContainer.css';
+
+import ItemCount from "../../ListProductsSimple/ProductsSimple/ItemCount";
+import { CartContext } from '../../../../../context/cartContext';
 //assets
 import imagen from '../../../../../assets/img/products/clasica.png';
-function ItemDetailContainer(){
+
+function ItemDetailContainer(props){
 
     const urlMenusApi = 'https://strapi.thefit-menu.com/menus';
 
@@ -24,7 +28,6 @@ function ItemDetailContainer(){
         return await fetch(urlMenusApi)
         .then((response) => response.json())
         .then((data) =>{
-            console.log(`FETCH.data`, data)
             setInfoProduct(data)
         })
         .catch(err => console.log(`err`, err))
@@ -37,6 +40,18 @@ function ItemDetailContainer(){
         items !== 0 && setItems(items - 1)
     }
 
+    //Logica Carrito
+    const [cart, setCart] = useContext(CartContext);
+    const addToCart = () =>{
+        console.log("addToCart")
+        const itemVianda = {nameVianda: 'nombrevianda', namePlatos: 'nombre plato', price: 2000}
+        setCart(currentState => [...currentState, itemVianda]);
+        console.log("itemVianda:", itemVianda)
+        console.log("cart: ",cart)
+    }
+
+    console.log("infoProduct: ", infoProduct) 
+    console.log("plates: ", infoProduct.plates) 
     return(
         <div className="detail__container">
             <div className="detail__img">
@@ -44,9 +59,8 @@ function ItemDetailContainer(){
                 <ItemCount onAdd={onAdd} onLess={onLess} quantity={items}/>
             </div>
             <div className="item__container">
-                {console.log("endpoint: ", infoProduct)}
                 <h4>PLATOS DE LA SEMANA: </h4>
-                {
+                {   
                     infoProduct &&
                     infoProduct.length &&
                     infoProduct[2] &&
@@ -54,7 +68,7 @@ function ItemDetailContainer(){
                         <ItemDetail key={index} platos={plato.name}/>
                     ))
                 }
-                <Link to="/cart" className="link"><button>AGREGAR AL CARRITO</button></Link>
+                <button onClick={addToCart}>AGREGAR AL CARRITO</button>
             </div>
 
         </div>

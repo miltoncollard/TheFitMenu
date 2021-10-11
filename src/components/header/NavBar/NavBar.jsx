@@ -1,6 +1,7 @@
 import logo from '../../../assets/img/logo.png'
 import './NavBar.css';
 import {Link, NavLink} from 'react-router-dom';
+import Cart from '../../main/Cart/cart';
 //external components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faShoppingCart, faChevronDown } from '@fortawesome/free-solid-svg-icons'
@@ -36,7 +37,7 @@ const NavBar = () => {
             </ul>
         </div>
         <div className="nav__icons">
-        <a href="#"><FontAwesomeIcon icon={faShoppingCart} /></a>
+        <Cart/>
         </div>
     </nav>
   );
