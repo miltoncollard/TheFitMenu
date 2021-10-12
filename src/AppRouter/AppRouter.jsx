@@ -11,6 +11,7 @@ import Menu from '../pages/Menu';
 import Cart from '../components/main/Cart/cart';
 import NuestrosClientes from '../components/main/NuestrosClientes/NuestrosClientes';
 import NuestrasViandas from '../pages/NuestrasViandas';
+import ComoHacerPedido from "../pages/ComoHacerPedido";
 import ServicioCatering from '../components/main/ServicioCatering/ServicioCatering';
 import Construccion from '../components/building/building';
 import Error404 from '../components/Error/error404';
@@ -25,8 +26,8 @@ export default function AppRouter(){
                 <Switch>
                     <Route exact path="/nuestrasviandas" component={NuestrasViandas}/> 
                     <Route exact path="/menu/:productID" component={Menu}/>
+                    <Route exact path="/comohacermipedido" component={ComoHacerPedido}/>
                     <Route exact path="/cart" component={Cart}/>
-                    <Route path="/comohacermipedido" component={Construccion}/>
                     <Route path="/novedades" component={Construccion}/>
                     <Route path="/quienessomos" component={Construccion}/>
                     <Route path="/contacto" component={Construccion}/>
