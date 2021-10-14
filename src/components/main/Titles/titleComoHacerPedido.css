@@ -1,7 +1,15 @@
-.pedidos__title{
-    margin-top: 100px;
+.pedidos .pedidos__intro .pedidos__title{
+    padding-top: 180px;
+    background-color: rgba(236,237,239,255);
 }
 
-.pedidos__title h1{
-    font-size: 60px;
+.pedidos .pedidos__intro .pedidos__title h1{
+    color: rgb(156,210,43);
+    font-size: 50px;
+    font-family: 'Maharlika';
+    font-weight: 100;
+    margin: 0;
 }
+
+
+

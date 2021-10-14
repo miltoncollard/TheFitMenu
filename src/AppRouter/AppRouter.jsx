@@ -12,16 +12,18 @@ import Cart from '../components/main/Cart/cart';
 import NuestrosClientes from '../components/main/NuestrosClientes/NuestrosClientes';
 import NuestrasViandas from '../pages/NuestrasViandas';
 import ComoHacerPedido from "../pages/ComoHacerPedido";
+import QuienesSomos from "../pages/QuienesSomos";
+import Contacto from '../pages/Contacto';
 import ServicioCatering from '../components/main/ServicioCatering/ServicioCatering';
 import Construccion from '../components/building/building';
 import Error404 from '../components/Error/error404';
 import Footer from  '../components/footer/footer';
-import { CartProvider } from '../context/cartContext';
+import { CartContextProvider } from '../context/cartContext';
 
 export default function AppRouter(){
     return(
         <BrowserRouter>
-            <CartProvider>
+            <CartContextProvider>
                 <NavBar/>
                 <Switch>
                     <Route exact path="/nuestrasviandas" component={NuestrasViandas}/> 
@@ -29,8 +31,8 @@ export default function AppRouter(){
                     <Route exact path="/comohacermipedido" component={ComoHacerPedido}/>
                     <Route exact path="/cart" component={Cart}/>
                     <Route path="/novedades" component={Construccion}/>
-                    <Route path="/quienessomos" component={Construccion}/>
-                    <Route path="/contacto" component={Construccion}/>
+                    <Route path="/quienessomos" component={QuienesSomos}/>
+                    <Route path="/contacto" component={Contacto}/>
                     <Route exact path="/">
                         <DemoCarousel/>
                         <About/>
@@ -42,7 +44,7 @@ export default function AppRouter(){
                     <Route path="*" component={Error404}/>
                 </Switch>
                 <Footer/>
-            </CartProvider>
+            </CartContextProvider>
         </BrowserRouter>
     )
 }

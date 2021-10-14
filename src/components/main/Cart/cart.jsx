@@ -7,11 +7,13 @@ import './cart.css';
 
 
 export default function Cart(){
+
     const [showCart, setShowCart] = useState(false)
 
     const handleCart = () =>{
         !showCart ? setShowCart(true) : setShowCart(false)
     }
+
 
     return(
         <div className="nav__cart">

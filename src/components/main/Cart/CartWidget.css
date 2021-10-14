@@ -1,0 +1,10 @@
+.nav__cart .cart__widget{
+    display: none;
+}
+.nav__cart .active{
+    display: block;
+}
+
+.widget__void{
+    z-index: -1000;
+}

@@ -2,23 +2,27 @@ import React,{useState, useEffect, useContext} from "react";
 import {Link} from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import ItemDetail from '../ItemDetail/ItemDetail';
-
+import ItemCount from "../../ListProductsSimple/ProductsSimple/ItemCount";
+import { CartContext } from '../../../../../context/cartContext';
 //css
 import './ProductDetailContainer.css';
 
-import ItemCount from "../../ListProductsSimple/ProductsSimple/ItemCount";
-import { CartContext } from '../../../../../context/cartContext';
 //assets
 import imagen from '../../../../../assets/img/products/clasica.png';
 
-function ItemDetailContainer(props){
+
+//
+// PAGINA DETALLADA DEL MENU 
+//
+function ItemDetailContainer({plates}){
 
     const urlMenusApi = 'https://strapi.thefit-menu.com/menus';
 
     const [infoProduct, setInfoProduct] = useState([]);
-    const [items, setItems] = useState(0);
-    const [stock, setStock] = useState(5);
-    const {productID} = useParams()
+    const [platos, setPlatos] = useState([])
+    const [platosFinal, setPlatosFinal] = useState([])
+    const {addItem} = useContext(CartContext)
+    const handleOnAdd = count => addItem(plates,count)
 
     useEffect(() =>{
         getMenus() 
@@ -29,46 +33,64 @@ function ItemDetailContainer(props){
         .then((response) => response.json())
         .then((data) =>{
             setInfoProduct(data)
+            filterPlates(data)
+            
         })
         .catch(err => console.log(`err`, err))
     }
 
-    const onAdd =() =>{
-       items < stock && setItems(items + 1)
-    }
-    const onLess =() =>{
-        items !== 0 && setItems(items - 1)
+    const filterPlates = (infoProduct) => {
+        plates.map((plate) => {
+            infoProduct.find( o => {
+                o.plates.map((plateInfoProduct) => {
+                     if(plateInfoProduct.id === plate){
+                            return setPlatos(prevPlato => {
+                                return [ 
+                                  ...prevPlato, 
+                                  plateInfoProduct.name
+                                ]
+                              })
+                        
+                     }
+                })
+            })
+        })
+        
     }
 
-    //Logica Carrito
-    const [cart, setCart] = useContext(CartContext);
-    const addToCart = () =>{
-        console.log("addToCart")
-        const itemVianda = {nameVianda: 'nombrevianda', namePlatos: 'nombre plato', price: 2000}
-        setCart(currentState => [...currentState, itemVianda]);
-        console.log("itemVianda:", itemVianda)
-        console.log("cart: ",cart)
+    const showItem = () =>{
+        platos.forEach((p) => {
+            if (!platosFinal.includes(p)) {
+                setPlatosFinal(prevPlato => {
+                    return [ 
+                      ...prevPlato, 
+                      p
+                    ]
+                  })
+            }
+        });
+        
     }
 
-    console.log("infoProduct: ", infoProduct) 
-    console.log("plates: ", infoProduct.plates) 
     return(
         <div className="detail__container">
-            <div className="detail__img">
-                <img src={imagen} alt="" />
-                <ItemCount onAdd={onAdd} onLess={onLess} quantity={items}/>
+            <div className="detail__preInfo">
+                <div className="preInfo__img">
+                    <img src={imagen} alt="" />
+                </div>
+                <div className="preInfo__stock">
+                    <ItemCount stock={5} onAdd={handleOnAdd}/>
+                </div>
             </div>
             <div className="item__container">
                 <h4>PLATOS DE LA SEMANA: </h4>
-                {   
-                    infoProduct &&
-                    infoProduct.length &&
-                    infoProduct[2] &&
-                    infoProduct[2].plates.map((plato,index) =>(
-                        <ItemDetail key={index} platos={plato.name}/>
-                    ))
+                {showItem()}
+                {
+                  platosFinal.map((plato,index) => {
+                    return( <ItemDetail key={index} platos={plato}/> )
+                    
+                })
                 }
-                <button onClick={addToCart}>AGREGAR AL CARRITO</button>
             </div>
 
         </div>

@@ -1,38 +1,57 @@
 .detail__container{
-    padding-top: 150px;
+    padding: 150px 100px 400px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
 }
 
-.detail__container .detail__img{
+.detail__container .detail__preInfo .preInfo__img{
     width: 30%;
-    margin: 0 0 40px 30px;
     padding: 0;
 
 }
-.detail__container .detail__img img{
+.detail__container .detail__preInfo .preInfo__img img{
     width: 200px;
     height: 200px;
 }
 
-.detail__container .detail__img .stock__item{
+.detail__container .detail__preInfo .preInfo__stock{
+    margin-top: 5px;
+}
+
+.detail__container .detail__preInfo .preInfo__stock .item__count .stock__countButtons{
     display: flex;
-    justify-content :center;
+    justify-content :space-between;
     align-items: center;
     border: 1px rgb(142, 228, 124) solid;
     border-radius: 10px;
-    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 150px;
-    gap: 20px;
 }
 
-.detail__container .detail__img .stock__item p{
-    margin: 10px;
+.detail__container .detail__preInfo .preInfo__stock .item__count .stock__countButtons button{
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.detail__container .detail__preInfo .preInfo__stock .item__count .stock__addButton{
+  position: relative;
+  left: 400px;
+}
+
+.detail__container .detail__preInfo .preInfo__stock .item__count .stock__addButton button{
+    display: block;
+    margin: 5px auto;
+    padding: 10px 20px;
+    background-color: rgb(166, 211, 76);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .detail__container .item__container{
@@ -52,13 +71,3 @@
     align-items: center;
 }
 
-.detail__container .item__container button{
-    display: flex;
-    justify-content: left;
-    margin-top: 50px;
-    padding: 10px;
-    background-color: rgb(166, 211, 76);
-    border: none;
-    font-weight: bold;
-    text-transform: uppercase;
-}

@@ -1,0 +1,18 @@
+.intro__content{
+    padding-top: 150px ;
+}
+
+.intro__content .contacto__title h1{
+    color: rgb(156,210,43);
+    font-size: 50px;
+    font-family: 'Maharlika';
+    font-weight: 100;
+    margin: 40px 0 0 0;
+}
+
+.intro__content .contacto__subtitle h3{
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    margin: 10px 0 50px 0;
+}

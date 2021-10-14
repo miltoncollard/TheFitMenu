@@ -1,0 +1,25 @@
+.cart__itemWidget{
+    width: 100%;
+    display: flex;
+}
+
+.cart__itemWidget .itemWidget__data{
+    display: flex;
+    width: 90%;
+}
+
+.cart__itemWidget .itemWidget__data img{
+    padding: 10px 20px;
+    width: 140px;
+    height: 125px;
+}
+
+.cart__itemWidget .itemWidget__remove{
+    width: 10%;
+}
+.cart__itemWidget .itemWidget__remove button{
+    display: block;
+    margin: 10px auto;
+    color: grey;
+    
+}
