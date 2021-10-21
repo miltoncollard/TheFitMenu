@@ -1,6 +1,7 @@
 .cart__itemWidget{
     width: 100%;
     display: flex;
+    background-color: white;
 }
 
 .cart__itemWidget .itemWidget__data{
@@ -13,6 +14,39 @@
     width: 140px;
     height: 125px;
 }
+
+.cart__itemWidget .itemWidget__data .itemWidget__text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px 0;
+}
+.cart__itemWidget .itemWidget__data .itemWidget__text p{
+    margin: 5px 0;
+    padding: 0;
+}
+
+.cart__itemWidget .itemWidget__data .itemWidget__text .item__count{
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;
+}
+.cart__itemWidget .itemWidget__data .itemWidget__text .item__count .stock__countButtons{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px black solid;
+    margin: 0;
+    padding: 0;
+}
+.cart__itemWidget .itemWidget__data .itemWidget__text .item__count .stock__countButtons button{
+    color: black;
+}
+
+.cart__itemWidget .itemWidget__data .itemWidget__text .item__count .span__stock{
+    font-size: 13px;
+}
+
 
 .cart__itemWidget .itemWidget__remove{
     width: 10%;

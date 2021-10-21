@@ -4,9 +4,10 @@ export const CartContext = createContext({});
 
 export const CartContextProvider = ({children}) =>{
 
-    const [cartItems, setCartItems] = useState([])
+    const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cartProducts')) || [])
     const [total, setTotal] = useState(0)
     const [price, setPrice] = useState(0)
+    const [showNotification, setShowNotification] = useState(false)
 
     useEffect(() =>{
         //setTotal(handleTotal())
@@ -14,29 +15,38 @@ export const CartContextProvider = ({children}) =>{
     }, [cartItems])
 
     //Agrego un item al carrito.
-    const addItem = (item, count) => {
-        let cartElement = {item, count}
-        let cartAux = []
-
-        if(isInCart(item)){
-            console.log('Esta en carrito')
-            
-            cartElement = cartItems.find(element => element.item.id === item.id)
-            cartElement.count = cartElement.count + count
-            cartAux = [...cartItems]
+    const addItem = (product) => {
+        let id
+        product.map((e)=>{
+            id = e.id
+        })
+        const idDuplicado = cartItems.some(item => item.id === id);
+        if(!idDuplicado){
+            setCartItems([
+                ...cartItems,
+                product[0]
+            ])
+            addItemStorage()
         }else{
-            console.log('No esta en carrito')
-            cartAux = [cartElement, ...cartItems]
+            setShowNotification(true)
+            console.log("Notification: ",showNotification)
         }
+    }
 
-        setCartItems(cartAux)
+    const addItemStorage = () =>{
+        localStorage.setItem("cartProducts", JSON.stringify(cartItems))
+    }
+
+    const handleNotification = () => {
+        console.log("entra en handleNotification")
+        setShowNotification(false)
     }
 
     // * Quito el elemento del carrito
-    const removeItem = (item) => {
-        if (isInCart(item)) {
+    const removeItem = (product) => {
+        if (isInCart(product)) {
         // 1. FILTRO mi carrito para obtener el resto de los items.
-        const cartElements = cartItems.filter(element => element.item.id !== item.id) || []
+        const cartElements = cartItems.filter(element => element.id !== product.id) || []
         // 2. actualizo el carrito, si solo tenia un elemento lo inicializo como []
         setCartItems([...cartElements])
         } 
@@ -46,12 +56,15 @@ export const CartContextProvider = ({children}) =>{
         return setCartItems([])
     }
 
-    const isInCart = (item) =>{
-        return cartItems && cartItems.some(element => element.item.id === item.id)
+    const isInCart = (product) =>{
+        return cartItems && cartItems.some(element => element.id === product.id)
     }
 
     
-
+    const updatePrice = (data,count) =>{
+        console.log("DATA: ",data)
+        console.log("COUNT: ",count) 
+    }
 
 
      
@@ -61,7 +74,9 @@ export const CartContextProvider = ({children}) =>{
             addItem,
             removeItem,
             clear,
-            isInCart
+            showNotification,
+            handleNotification,
+            updatePrice
         }}>
             {children}
         </CartContext.Provider>

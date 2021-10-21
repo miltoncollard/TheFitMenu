@@ -1,9 +1,9 @@
 //imagenes
 import img1 from './../assets/img/products/clasica.png'
-import img2 from './../assets/img/products/vegetarianas.png'
+import img2 from './../assets/img/products/veggie.png'
 import img3 from './../assets/img/products/eco.png'
 import img4 from './../assets/img/products/light.jpeg'
-import img5 from './../assets/img/products/light.jpeg'
+
 const product_card = [
     {
         id:1,

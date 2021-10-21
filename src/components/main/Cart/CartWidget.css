@@ -8,3 +8,32 @@
 .widget__void{
     z-index: -1000;
 }
+
+.message-cart-empty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 350px;
+    color: white;
+    font-size: 17px;
+    font-family: 'latoblack';
+}
+
+.cart__widget .cart__widget__button{
+    position: absolute;
+    bottom: 100px;
+    left: 130px;
+    color: black;
+    padding: 10px 20px;
+    background-color: rgb(166, 211, 76);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'latoblack';
+}
+
+.cart__widget__product{
+    display: flex;
+    flex-direction: column;
+}

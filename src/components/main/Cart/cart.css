@@ -42,7 +42,6 @@
 .nav__cart .active .cart__widget__product{
     display: flex;
     justify-content: space-between;
-    background-color: white;
     width: 38vh;
     height: 150px;
     position: absolute;

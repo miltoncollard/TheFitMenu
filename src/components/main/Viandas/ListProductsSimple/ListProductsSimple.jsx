@@ -3,7 +3,7 @@ import ProductSimple from './ProductsSimple/ProductSimple';
 //CSS
 import './ListProductsSimple.css';
 
-//ListProductsSimple: componente que informa todos los tipos de viandas existentes sin detalle
+//ListProductsSimple: componente que informa todos los tipos de viandas existentes sin detalle (HOME)
 export default function ListProductsSimple(){
 
     //APIs

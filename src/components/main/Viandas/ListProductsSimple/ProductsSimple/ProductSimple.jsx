@@ -3,14 +3,13 @@ import {Link} from 'react-router-dom';
 import imgClasica from '../../../../../assets/img/products/clasica.png'
 import imgLight from '../../../../../assets/img/products/light.png'
 import imgProteica from '../../../../../assets/img/products/proteica.png'
-import imgVeggie from '../../../../../assets/img/products/vegetarianas.png'
+import imgVeggie from '../../../../../assets/img/products/veggie.png'
 import './ProductSimple.css'
 //<ItemCount stock={4} initial={0}/>
 
 const ProductSimple = (props) =>{
 
     const imagen = () =>{
-        console.log("entra en if funcion imagen")
         if(props.name === 'Clásico'){
             return(<img src={imgClasica} alt="" />)
         }else if(props.name === 'Light'){
