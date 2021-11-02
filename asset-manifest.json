@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Thefitmenu/static/css/main.c3d51ef4.chunk.css",
-    "main.js": "/Thefitmenu/static/js/main.56c41408.chunk.js",
-    "main.js.map": "/Thefitmenu/static/js/main.56c41408.chunk.js.map",
+    "main.css": "/Thefitmenu/static/css/main.3b4084d8.chunk.css",
+    "main.js": "/Thefitmenu/static/js/main.016e8e6e.chunk.js",
+    "main.js.map": "/Thefitmenu/static/js/main.016e8e6e.chunk.js.map",
     "runtime-main.js": "/Thefitmenu/static/js/runtime-main.fd5cad5d.js",
     "runtime-main.js.map": "/Thefitmenu/static/js/runtime-main.fd5cad5d.js.map",
     "static/css/2.ed1298f3.chunk.css": "/Thefitmenu/static/css/2.ed1298f3.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.41a1fc6c.chunk.js.map": "/Thefitmenu/static/js/3.41a1fc6c.chunk.js.map",
     "index.html": "/Thefitmenu/index.html",
     "static/css/2.ed1298f3.chunk.css.map": "/Thefitmenu/static/css/2.ed1298f3.chunk.css.map",
-    "static/css/main.c3d51ef4.chunk.css.map": "/Thefitmenu/static/css/main.c3d51ef4.chunk.css.map",
+    "static/css/main.3b4084d8.chunk.css.map": "/Thefitmenu/static/css/main.3b4084d8.chunk.css.map",
     "static/js/2.a4a61ab1.chunk.js.LICENSE.txt": "/Thefitmenu/static/js/2.a4a61ab1.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Thefitmenu/static/media/lato-thinitalic-webfont.d4a4f0ea.woff2",
     "static/media/banner_1.f213d8ea.png": "/Thefitmenu/static/media/banner_1.f213d8ea.png",
@@ -33,7 +33,7 @@
     "static/js/runtime-main.fd5cad5d.js",
     "static/css/2.ed1298f3.chunk.css",
     "static/js/2.a4a61ab1.chunk.js",
-    "static/css/main.c3d51ef4.chunk.css",
-    "static/js/main.56c41408.chunk.js"
+    "static/css/main.3b4084d8.chunk.css",
+    "static/js/main.016e8e6e.chunk.js"
   ]
 }
