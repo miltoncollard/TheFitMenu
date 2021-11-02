@@ -153,8 +153,15 @@ function ItemDetailContainer({plates, id}){
             </div>
             <div className="detail__options">
                 <h3>OPCIONES DE PEDIDO</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores tenetur quo enim officia totam laborum fugit nulla nostrum exercitationem similique. Sequi architecto explicabo in quas dolorum accusamus incidunt repellendus autem!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repellendus voluptatum, temporibus inventore ipsam alias sit nesciunt fuga, natus tempora voluptatibus minima? Culpa rem eum qui repellat ratione expedita sint!</p>
+                <p>• Tomamos pedidos hasta el Lunes anterior a las 16hs.</p>
+                <p>• Estas viandas saludables contienen variedad de insumos; carne, pollo, verduras y pastas.</p>
+                <p>• Menú apto para hipertensos y diabéticos.</p>
+                <p>• Realizamos envíos a domicilio.</p>
+                <p>• Dentro de esta opción podés realizar un cambio si un plato no te gustara. Es decir, podés sacar un plato (ponerlo en "0") y repetir otro plato (ponerlo en "2"). Sólo se puede realizar un cambio.</p>
+                <p>• Los pedidos se toman hasta el Sábado a las 12h. La entrega es semanal los días Lunes dentro de la franja horaria 11.30-22h.</p>
+                <p>• Las viandas se entregan frescas para que vos las congeles.</p>
+                <p>• ¡Cocinamos sin sal!</p>
+                <p>• Métodos de pago: Podés abonar en efectivo, por transferencia o con tarjeta de crédito o débito por Mercado Pago con un 10% adicional.</p>
             </div>
             <div className="detail__BtnAddCart">
                 <button onClick={handleOnAdd}>Agregar al carrito</button>       

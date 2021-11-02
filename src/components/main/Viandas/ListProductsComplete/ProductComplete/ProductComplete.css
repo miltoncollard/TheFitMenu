@@ -34,3 +34,38 @@
     background-color: rgb(166, 211, 76);
     border: none;
 }
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+    padding-left: 10px;
+    margin: 0;
+    height: 50px;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select{
+    display: flex;
+    padding: auto 10px;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+}
+.MuiPaper-root ul li{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   margin: 0;
+   height: 50px;
+}
+
+.MuiPaper-root ul li h5{
+    font-size: 15px;
+    color: rgb(127, 175, 15);
+}
+
+.MuiPaper-root ul li p{
+    color: rgb(170, 169, 169);
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: rgb(127, 175, 15) !important;   
+}
+

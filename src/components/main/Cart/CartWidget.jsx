@@ -14,7 +14,7 @@ export default function CartWidget ({show,close}){
     cartItems.map(element =>{
         productItem.push(element)
     })
-
+    
     return(
         <div className={`cart__widget ${show ? 'active' : ''}`}>
             <div className="cart__widget__title">

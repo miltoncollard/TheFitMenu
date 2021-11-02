@@ -1,8 +1,8 @@
 .viandas .home__product__container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 3rem;
-    margin: 100px 50px;
+    gap: 1.5rem;
+    margin: 100px 0;
 }
 
 .home__product__container .product__card{

@@ -33,7 +33,7 @@ export default function AppRouter(){
                     <Route path="/novedades" component={Construccion}/>
                     <Route path="/quienessomos" component={QuienesSomos}/>
                     <Route path="/contacto" component={Contacto}/>
-                    <Route exact path="/">
+                    <Route exact path="/Thefitmenu">
                         <DemoCarousel/>
                         <About/>
                         <Banner/>

@@ -9,7 +9,7 @@ import {faShoppingCart, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 const NavBar = () => {
   return ( 
     <nav className="nav container">
-        <a href="/">
+        <a href="/Thefitmenu">
             <img className="nav__logo" src={logo} alt="" />
         </a>
         <div className="nav__menu">
