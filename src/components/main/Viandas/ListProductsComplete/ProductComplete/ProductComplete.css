@@ -69,3 +69,9 @@
     border-color: rgb(127, 175, 15) !important;   
 }
 
+.css-qiwgdb.css-qiwgdb.css-qiwgdb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px;
+}
