@@ -26,6 +26,7 @@ const ProductComplete = (vianda) =>{
     };
     
     let img
+    let eleccion = []
     
     if(vianda.type === 'Clásico'){
         img = imgClasica
@@ -43,7 +44,6 @@ const ProductComplete = (vianda) =>{
         }
     }
 
-    console.log("VIANDA: ",vianda)
     return(
         <div className="product__card">
             <div className="product__card__img">
@@ -62,18 +62,19 @@ const ProductComplete = (vianda) =>{
                             className="MuiSelect__Select"
                         >
                             {vianda.menu.map((option) =>(
-                                <MenuItem className="MuiSelect__MenuItem" value={option.quantity}>
+                                
+                                <MenuItem className="MuiSelect__MenuItem" value={option}>
                                     <h5>{option.quantity} PLATOS</h5>
                                     <p>${option.price}</p>
                                 </MenuItem>
                             ))}
-                            {console.log("OPCION: ",opcion)}
                         </Select>
-                        
+
+                        <Link to={{ pathname: `/menu/${vianda.type}`, state: { plates: opcion, id: vianda.id, type: vianda.type}}} className="link"><button>COMPRAR</button></Link>
                     </FormControl>
                 </Box>
             </div>
-            <Link to={{ pathname: `/menu/${vianda.type}`, state: { plates: vianda.menu[0], id: vianda.id, type: vianda.type}}} className="link"><button>COMPRAR</button></Link>
+            
         </div>
     )
 

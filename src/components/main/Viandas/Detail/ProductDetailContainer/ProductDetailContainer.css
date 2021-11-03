@@ -1,11 +1,11 @@
 .detail__container{
-    padding: 150px 100px 400px 100px;
+    padding: 150px 50px 400px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
 }
 
                                           /*CSS PREINFO*/
@@ -33,14 +33,25 @@
     text-align: left;
     position: relative;
     bottom: 30px;
-    margin-left: 80px;
+    margin-left: 40px;
     
 }
 .detail__container .detail__preInfo .preInfo__text h4{
     font-size: 30px;
     font-family: 'montserrat';
     color: #9dc22b;
+    text-transform: uppercase;
 }
+.detail__container .detail__preInfo .preInfo__text h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.detail__container .detail__preInfo .preInfo__text .detail__item span{
+    font-family: 'Montserrat';
+    font-weight:bold;
+}
+
                                           /*CSS OPCIONES*/
 .detail__options{
     width: 100%;
@@ -49,10 +60,25 @@
 .detail__options h3{
     font-family: 'montserrat';
     color: #9dc22b;
+    margin: 20px 0 0 0;
+    padding: 0;
 }
-.detail__options p{
-    width: 70%;
-    font-family: 'Lato';
+
+.detail__options .detail__options__text{
+    display: flex;
+    justify-content: left;
+    align-items:baseline;
+    height: 40px;
+    margin: 0 0 10px 0;
+}
+.detail__options .detail__options__text #dot{
+    width: 2%;
+    font-size: 25px;
+}
+.detail__options .detail__options__text p{
+    width: 87%;
+    font-family: 'Montserrat';
+    font-weight:bold;
 }
                                           /*CSS BUTTON*/
 .detail__container .detail__BtnAddCart{
@@ -60,8 +86,8 @@
 }
 .detail__container .detail__BtnAddCart button{
     display: block;
-    margin: 5px auto;
-    padding: 10px 20px;
+    margin: 25px auto;
+    padding: 15px 25px;
     background-color: rgb(166, 211, 76);
     border: none;
     font-weight: bold;

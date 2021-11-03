@@ -7,6 +7,7 @@ import { useLocation } from "react-router";
 import ItemDetail from '../ItemDetail/ItemDetail';
 import ItemCount from "../../../ItemCount/ItemCount";
 import { CartContext } from '../../../../../context/cartContext';
+import CarouselDetail from "../../../CarouselDetail/CarouselDetail";
 //css
 import './ProductDetailContainer.css';
 
@@ -19,7 +20,7 @@ import imgVeggie from '../../../../../assets/img/products/veggie.png';
 //
 // PAGINA DETALLADA DEL MENU 
 //
-function ItemDetailContainer({plates, id}){
+function ItemDetailContainer({plates, id, type}){
 
     const location = useLocation();
 
@@ -44,7 +45,6 @@ function ItemDetailContainer({plates, id}){
     const handleOnAdd = count => addItem(product,count)
 
     const handleClose = (event, reason) => {
-        console.log("entra en handleClose")
         if (reason === 'clickaway') {
           return;
         }
@@ -138,10 +138,10 @@ function ItemDetailContainer({plates, id}){
         <div className="detail__container">
             <div className="detail__preInfo">
                 <div className="preInfo__img">
-                    <img src={selectImg()} alt="" />
+                    <CarouselDetail type={productType}/>
                 </div>
                 <div className="preInfo__text">
-                    <h4>VIANDAS {product.type} 5 PLATOS</h4>
+                    <h4>VIANDAS {productType} {product[0].quantity} PLATOS</h4>
                     <h3>PLATOS DE LA SEMANA:</h3>
                     {showItem()}
                     {
@@ -153,15 +153,42 @@ function ItemDetailContainer({plates, id}){
             </div>
             <div className="detail__options">
                 <h3>OPCIONES DE PEDIDO</h3>
-                <p>• Tomamos pedidos hasta el Lunes anterior a las 16hs.</p>
-                <p>• Estas viandas saludables contienen variedad de insumos; carne, pollo, verduras y pastas.</p>
-                <p>• Menú apto para hipertensos y diabéticos.</p>
-                <p>• Realizamos envíos a domicilio.</p>
-                <p>• Dentro de esta opción podés realizar un cambio si un plato no te gustara. Es decir, podés sacar un plato (ponerlo en "0") y repetir otro plato (ponerlo en "2"). Sólo se puede realizar un cambio.</p>
-                <p>• Los pedidos se toman hasta el Sábado a las 12h. La entrega es semanal los días Lunes dentro de la franja horaria 11.30-22h.</p>
-                <p>• Las viandas se entregan frescas para que vos las congeles.</p>
-                <p>• ¡Cocinamos sin sal!</p>
-                <p>• Métodos de pago: Podés abonar en efectivo, por transferencia o con tarjeta de crédito o débito por Mercado Pago con un 10% adicional.</p>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> Tomamos pedidos hasta el Lunes anterior a las 16hs.</p>
+                </div>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> Estas viandas saludables contienen variedad de insumos; carne, pollo, verduras y pastas.</p>
+                </div>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> Menú apto para hipertensos y diabéticos.</p>
+                </div>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> Realizamos envíos a domicilio.</p>
+                </div>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> Dentro de esta opción podés realizar un cambio si un plato no te gustara. Es decir, podés sacar un plato (ponerlo en "0") y repetir otro plato (ponerlo en "2"). Sólo se puede realizar un cambio.</p>
+                </div>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> Los pedidos se toman hasta el Sábado a las 12h. La entrega es semanal los días Lunes dentro de la franja horaria 11.30-22h.</p>
+                </div>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> Las viandas se entregan frescas para que vos las congeles.</p> 
+                </div>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> ¡Cocinamos sin sal!</p>
+                </div>
+                <div className="detail__options__text">
+                    <p id="dot">•</p>
+                    <p> Métodos de pago: Podés abonar en efectivo, por transferencia o con tarjeta de crédito o débito por Mercado Pago con un 10% adicional.</p>
+                </div>   
             </div>
             <div className="detail__BtnAddCart">
                 <button onClick={handleOnAdd}>Agregar al carrito</button>       
