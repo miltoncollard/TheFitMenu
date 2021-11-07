@@ -93,3 +93,8 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.detail__container .detail__BtnAddCart button:disabled{
+    background-color: rgb(209, 209, 209);
+}
+

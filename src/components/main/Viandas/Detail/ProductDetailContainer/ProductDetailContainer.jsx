@@ -34,23 +34,42 @@ function ItemDetailContainer({plates, id, type}){
 
     const urlMenusApi = 'https://strapi.thefit-menu.com/menus';
 
+    //constante en desuso
     const [infoProduct, setInfoProduct] = useState([]);
+
+    //constantes para filtrar los platos seleccionados 
     const [platos, setPlatos] = useState([])
     const [platosFinal, setPlatosFinal] = useState([])
+    const [superPlato, setSuperPlato] = useState([]);
+    const [isExeded, setIsExeded] = useState(
+        {
+            state: undefined,
+            message: ''
+        }
+    );
+    const [showNotificationExeded, setShowNotificationExeded] = useState(false)
+    //constante para agregar item al carrito
     const {addItem} = useContext(CartContext)
-    const {showNotification, handleNotification} = useContext(CartContext)
-    const [open, setOpen] = React.useState(showNotification);
   
-    //const handleOnAdd = count => addItem(plates,count)
+    //MODIFICAR parametro PRODUCT para enviar solo esta informacion: 
+        /*  -ID producto
+            -TIPO producto
+            -CANTIDAD producto
+            -PLATOS:    -ID plato
+                        -CANTIDAD plato  (segun selecciona en cada plato)
+        */
     const handleOnAdd = count => addItem(product,count)
 
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
-        }
-        setOpen(false);
-      };
- 
+    // const handleClose = (event, reason) => {
+    //     if (reason === 'clickaway') {
+    //       return;
+    //     }
+    //     setOpen(false);
+    //   };
+     //cerrar notificacion
+     const handleNotification = () => {
+        setShowNotificationExeded(false)
+    }
     const action = (
         <React.Fragment>
             <IconButton
@@ -67,6 +86,9 @@ function ItemDetailContainer({plates, id, type}){
     useEffect(() =>{
         getMenus() 
     },[])
+    useEffect(() =>{
+         
+    })
 
     const getMenus = async () =>{
         return await fetch(urlMenusApi)
@@ -133,6 +155,48 @@ function ItemDetailContainer({plates, id, type}){
         })             
         return img
     }
+
+    //contador de selects
+    const countSelectPlates = (e) => {
+        isExeded.state = undefined;
+        const count = e.target.value;
+        const id = e.target.id;
+        const quantity = product[0].quantity;
+        const productoModifciado = superPlato.find(t => t.id === id);
+        productoModifciado.quantity = parseInt(count, 10);
+        
+        let totalPlates = 0;
+        superPlato.forEach((sp) =>{ 
+            totalPlates += sp.quantity;
+        });
+
+        if (totalPlates > quantity) {
+            console.log("mostrar true")
+            isExeded.state = true;
+            isExeded.message = `La cantidad de platos maxima es ${product[0].quantity}`
+            setShowNotificationExeded(true)
+        } else if(totalPlates < quantity) {
+            console.log("mostrar false")
+            isExeded.state = false;
+            isExeded.message = `La cantidad de platos minima es ${product[0].quantity}`
+            setShowNotificationExeded(true)
+        }
+
+        setSuperPlato([...superPlato]); 
+    }
+
+    const formChange = (e) => {
+        console.log("formSelect", e)
+    }
+
+    if (product[0]?.platos && !superPlato.length) {
+        setSuperPlato(product[0]?.platos?.map((p) => {
+            return {
+                id: p,
+                quantity: 1,
+            };
+        }));
+    }
     
     return(
         <div className="detail__container">
@@ -144,11 +208,14 @@ function ItemDetailContainer({plates, id, type}){
                     <h4>VIANDAS {productType} {product[0].quantity} PLATOS</h4>
                     <h3>PLATOS DE LA SEMANA:</h3>
                     {showItem()}
+                    <form onChange={formChange}>
                     {
-                    platosFinal.map((plato,index) => {
-                        return( <ItemDetail key={index} platos={plato}/> )
-                    })
+                        superPlato.length && superPlato.map((producto,index) => {
+                            console.info(producto)
+                            return( <ItemDetail id={producto.id} key={producto.id} platos={platosFinal[index]} stock={producto.quantity} changeSelect={countSelectPlates}/> )
+                        })
                     }
+                    </form>
                 </div>
             </div>
             <div className="detail__options">
@@ -191,10 +258,9 @@ function ItemDetailContainer({plates, id, type}){
                 </div>   
             </div>
             <div className="detail__BtnAddCart">
-                <button onClick={handleOnAdd}>Agregar al carrito</button>       
+                <button onClick={handleOnAdd} disabled={isExeded.state == true || isExeded.state == false}>Agregar al carrito</button>       
             </div>
-            
-            <Snackbar open={showNotification} autoHideDuration={6000} onClose={handleNotification} message="El producto ya fue agregado" action={action}/>
+            <Snackbar open={showNotificationExeded} autoHideDuration={5000} onClose={handleNotification} message={isExeded.message} action={action}/>
         </div>
     )
 }

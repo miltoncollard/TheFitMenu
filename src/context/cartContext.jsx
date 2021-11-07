@@ -21,6 +21,14 @@ export const CartContextProvider = ({children}) =>{
             id = e.id
         })
         const idDuplicado = cartItems.some(item => item.id === id);
+        console.log("PRODUCT: ", product[0])
+        //ARMAR NUEVO ARRAY DE OBJETOS PARA ALMACENAR EN EL LOCAL STORAGE CON:
+        /*  -ID producto
+            -TIPO producto
+            -CANTIDAD producto
+            -PLATOS:    -ID plato
+                        -CANTIDAD plato 
+        */
         if(!idDuplicado){
             setCartItems([
                 ...cartItems,
@@ -38,7 +46,6 @@ export const CartContextProvider = ({children}) =>{
     }
 
     const handleNotification = () => {
-        console.log("entra en handleNotification")
         setShowNotification(false)
     }
 
