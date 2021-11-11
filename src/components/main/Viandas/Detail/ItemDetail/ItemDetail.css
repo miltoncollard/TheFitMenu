@@ -1,0 +1,13 @@
+.detail__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.detail__item select{
+    padding: 3px 5px;
+    margin: 0 3px;
+    border: 3px black solid;
+    border-radius: 10%;
+}

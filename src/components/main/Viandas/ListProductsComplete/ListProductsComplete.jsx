@@ -28,36 +28,47 @@ export default function ListProductsComplete(){
     const FilterProducts = () =>{
         let lista = []
         let nombreVianda
+        let quantity 
         products.forEach(element => {
+
+            //tomo el nombre de la vianda de la propiedad name
             nombreVianda = element.name.split('- ')[1]
+
+            //tomo la cantidad de platos de la propiedad name
+            quantity = element.name.split('- ')[0]
+            quantity = quantity.replace('viandas', '');
+            quantity = quantity.replace('Promo', '');
+            quantity = quantity.replace(/ /g,'');
+
             let configMenu
             let configLista
-            if(nombreVianda === 'Clásico'){
-                if(lista.some(tipo => tipo.type === "Clásico")){
+
+            if(nombreVianda === 'Clásica'){
+                if(lista.some(tipo => tipo.type === "Clásica")){
                     if(element.hasOwnProperty('menuB') && element.menuB !== null){
-                        configMenu = {"quantity": 10,
+                        configMenu = {"quantity": quantity,
                                       "price": element.price,
                                       "platos": element.menuA.plates}
                     }else{
-                        configMenu = {"quantity": element.menuA.plates.length,
+                        configMenu = {"quantity": quantity,
                                       "price": element.price,
                                       "platos": element.menuA.plates}
                     }
                     lista.map ((add, index) =>{ 
-                        if(add.type === 'Clásico'){
+                        if(add.type === 'Clásica'){
                             add.menu.push(configMenu)}
                         })
                 }else{
                     if(element.hasOwnProperty('menuB') && element.menuB !== null){
                         configLista = {"id": element.id,
                                        "type": nombreVianda,
-                                       "menu": [{"quantity": 10,
+                                       "menu": [{"quantity": quantity,
                                                  "price": element.price,
                                                  "platos": element.menuA.plates}]}
                     }else{
                         configLista = {"id": element.id,
                                        "type": nombreVianda,
-                                       "menu": [{"quantity": element.menuA.plates.length,
+                                       "menu": [{"quantity": quantity,
                                                  "price": element.price,
                                                  "platos": element.menuA.plates}]}
                     }
@@ -67,11 +78,11 @@ export default function ListProductsComplete(){
             if(nombreVianda === 'Protéico'){
                 if(lista.some(tipo => tipo.type === "Protéico")){
                     if(element.hasOwnProperty('menuB') && element.menuB !== null){
-                        configMenu = {"quantity": 10,
+                        configMenu = {"quantity": quantity,
                                       "price": element.price,
                                       "platos": element.menuA.plates}
                     }else{
-                        configMenu = {"quantity": element.menuA.plates.length,
+                        configMenu = {"quantity": quantity,
                                       "price": element.price,
                                       "platos": element.menuA.plates}
                     }
@@ -83,13 +94,13 @@ export default function ListProductsComplete(){
                     if(element.hasOwnProperty('menuB') && element.menuB !== null){
                         configLista = {"id": element.id,
                                        "type": nombreVianda,
-                                       "menu": [{"quantity": 10,
+                                       "menu": [{"quantity": quantity,
                                                  "price": element.price,
                                                  "platos": element.menuA.plates}]}
                     }else{
                         configLista = {"id": element.id,
                                        "type": nombreVianda,
-                                       "menu": [{"quantity": element.menuA.plates.length,
+                                       "menu": [{"quantity": quantity,
                                                  "price": element.price,
                                                  "platos": element.menuA.plates}]}
                     }
@@ -99,11 +110,11 @@ export default function ListProductsComplete(){
             if(nombreVianda === 'Veggie'){
                 if(lista.some(tipo => tipo.type === "Veggie")){
                     if(element.hasOwnProperty('menuB') && element.menuB !== null){
-                        configMenu = {"quantity": 10,
+                        configMenu = {"quantity": quantity,
                                       "price": element.price,
                                       "platos": element.menuA.plates}
                     }else{
-                        configMenu = {"quantity": element.menuA.plates.length,
+                        configMenu = {"quantity":quantity,
                                       "price": element.price,
                                       "platos": element.menuA.plates}
                     }
@@ -115,13 +126,13 @@ export default function ListProductsComplete(){
                     if(element.hasOwnProperty('menuB') && element.menuB !== null){
                         configLista = {"id": element.id,
                                        "type": nombreVianda,
-                                       "menu": [{"quantity": 10,
+                                       "menu": [{"quantity": quantity,
                                                  "price": element.price,
                                                  "platos": element.menuA.plates}]}
                     }else{
                         configLista = {"id": element.id,
                                        "type": nombreVianda,
-                                       "menu": [{"quantity": element.menuA.plates.length,
+                                       "menu": [{"quantity": quantity,
                                                  "price": element.price,
                                                  "platos": element.menuA.plates}]}
                     }
@@ -131,11 +142,11 @@ export default function ListProductsComplete(){
             if(nombreVianda === 'Light'){
                 if(lista.some(tipo => tipo.type === "Light")){
                     if(element.hasOwnProperty('menuB') && element.menuB !== null){
-                        configMenu = {"quantity": 10,
+                        configMenu = {"quantity": quantity,
                                       "price": element.price,
                                       "platos": element.menuA.plates}
                     }else{
-                        configMenu = {"quantity": element.menuA.plates.length,
+                        configMenu = {"quantity": quantity,
                                       "price": element.price,
                                       "platos": element.menuA.plates}
                     }
@@ -147,13 +158,13 @@ export default function ListProductsComplete(){
                     if(element.hasOwnProperty('menuB') && element.menuB !== null){
                         configLista = {"id": element.id,
                                        "type": nombreVianda,
-                                       "menu": [{"quantity": 10,
+                                       "menu": [{"quantity": quantity,
                                                  "price": element.price,
                                                  "platos": element.menuA.plates}]}
                     }else{
                         configLista = {"id": element.id,
                                        "type": nombreVianda,
-                                       "menu": [{"quantity": element.menuA.plates.length,
+                                       "menu": [{"quantity": quantity,
                                                  "price": element.price,
                                                  "platos": element.menuA.plates}]}
                     }

@@ -137,7 +137,7 @@ function ItemDetailContainer({plates, id, type}){
     const selectImg = () =>{
         let img
         product.map((item) =>{
-            if(item.type === 'Clásico'){
+            if(item.type === 'Clásica'){
                 img = imgClasica
             }else{
                 if(item.type === 'Protéico'){

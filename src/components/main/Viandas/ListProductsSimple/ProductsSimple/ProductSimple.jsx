@@ -8,9 +8,8 @@ import './ProductSimple.css'
 //<ItemCount stock={4} initial={0}/>
 
 const ProductSimple = (props) =>{
-
     const imagen = () =>{
-        if(props.name === 'Clásico'){
+        if(props.name === 'Clásica'){
             return(<img src={imgClasica} alt="" />)
         }else if(props.name === 'Light'){
             return(<img src={imgLight} alt="" />)

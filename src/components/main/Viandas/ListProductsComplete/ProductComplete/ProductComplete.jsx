@@ -18,7 +18,6 @@ import './ProductComplete.css'
 
 
 const ProductComplete = (vianda) =>{
-
     const [opcion, setOpcion] = useState('');
 
     const handleChange = (event) => {
@@ -26,9 +25,8 @@ const ProductComplete = (vianda) =>{
     };
     
     let img
-    let eleccion = []
     
-    if(vianda.type === 'Clásico'){
+    if(vianda.type === 'Clásica'){
         img = imgClasica
     }else{
         if(vianda.type === 'Protéico'){
@@ -43,6 +41,22 @@ const ProductComplete = (vianda) =>{
             }
         }
     }
+
+    function sortObjectEntries(obj){
+        let array = []
+
+        for (let index = 0; index < obj.menu.length; index++) {
+            array.push(obj.menu[index])            
+        }
+        array.sort(((a,b) => a.quantity - b.quantity));
+
+        const objordenado = {...obj, menu:array}
+
+        return objordenado
+    }
+
+    let viandaSort = sortObjectEntries(vianda)
+
 
     return(
         <div className="product__card">
@@ -61,8 +75,7 @@ const ProductComplete = (vianda) =>{
                             onChange={handleChange}
                             className="MuiSelect__Select"
                         >
-                            {vianda.menu.map((option) =>(
-                                
+                            {viandaSort.menu.map((option) =>(
                                 <MenuItem className="MuiSelect__MenuItem" value={option}>
                                     <h5>{option.quantity} PLATOS</h5>
                                     <p>${option.price}</p>

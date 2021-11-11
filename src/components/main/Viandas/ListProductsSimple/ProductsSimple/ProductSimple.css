@@ -3,6 +3,8 @@
     left: 0;
     width: 100%;
     height: 210px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .home__product__card button{

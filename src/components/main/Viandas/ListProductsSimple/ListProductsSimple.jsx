@@ -46,8 +46,9 @@ export default function ListProductsSimple(){
 
     return(
         <div className="home__product__container"> 
+            
             {tipoViandaFinal.map((vianda, index) =>{
-              if(vianda === "Clásico" ||
+              if(vianda === "Clásica" ||
                  vianda === "Light" ||
                  vianda === "Protéico" ||
                  vianda === "Veggie" ){  

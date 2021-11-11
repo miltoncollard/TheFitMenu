@@ -42,7 +42,7 @@ const CarouselDetail = (type) => {
     tipo = tipo.replace(/["]/g, '')
     const selectImagen = () =>{
 
-        if(tipo === "Clásico"){
+        if(tipo === "Clásica"){
             imagen1 = clasica1
             imagen2 = clasica2
             imagen3 = clasica3

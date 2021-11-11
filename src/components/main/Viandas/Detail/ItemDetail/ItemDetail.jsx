@@ -1,6 +1,9 @@
 import React,{useState, useEffect} from "react";
 
-function ItemDetail({platos, stock, changeSelect, value, id}){
+//css
+import './ItemDetail.css';
+
+function ItemDetail({platos, stock, changeSelect, id}){
     
     console.log("STOCK: ", stock)
     console.log("PLATOS: ", platos)
@@ -17,13 +20,3 @@ function ItemDetail({platos, stock, changeSelect, value, id}){
 }
 
 export default ItemDetail;
-
-
-//OPCIONES STOCK SELECCION DE PLATOS
-/*
-OPCION A:
-Se generan un select por cada plato. Se comunica todo el tiempo el valor de cada select al
-componente padre (ProductDetailContainer)
-
-
-*/
